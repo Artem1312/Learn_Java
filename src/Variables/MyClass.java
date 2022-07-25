@@ -43,5 +43,33 @@ public class MyClass {
         cv = 127.5;
         System.out.println(Double.MAX_VALUE);
         System.out.println(Double.MIN_VALUE);
+
+        int df = 3, dc = 23, sx = df + dc;
+        System.out.println(sx);
+
+        boolean ab, bb;
+        ab = true;
+        bb = false;
+        System.out.println(ab);
+        System.out.println(bb);
+
+        char ch1, ch2;
+        ch1 = 119;
+        ch2 = 'w';
+        char ch3 = '\u005B';
+        char ch4 = '\u005D';
+        System.out.println(ch3 + " " + ch1 + " " + ch2 + ch4);
+
+        int xx, yy, zz, cc;
+        xx = 119;
+        yy = 0167;
+        zz = 0x77;
+        cc = 0b01110111;
+        System.out.println(xx + ' ' + yy + ' '+ zz + ' ' + cc);
+
+        final int MY_CONST = 10;
+        int yyy;
+        yyy = MY_CONST + 20;
+
     }
 }
