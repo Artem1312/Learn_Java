@@ -1,6 +1,9 @@
 package Numbers;
 
+import javax.swing.plaf.basic.BasicBorders;
 import java.math.BigDecimal;
+import java.util.Date;
+import java.util.Random;
 
 public class MyCl1 {
     public static void main(String[] args) {
@@ -88,6 +91,80 @@ public class MyCl1 {
         System.out.println(Byte.parseByte("0100", 8));
         System.out.println(Byte.parseByte("77", 16));
         System.out.println(Byte.parseByte("01100", 2));
+
+        byte b2 = 1;
+        short sh = 20;
+        int i1 = 100;
+        float k = 10.3f;
+        long l1 = 200L;
+        double n = 1.8;
+
+        System.out.println(Byte.toString(b2));
+        System.out.println(Short.toString(sh));
+        System.out.println(Integer.toString(i1));
+        System.out.println(Float.toString(k));
+        System.out.println(Long.toString(l1));
+        System.out.println(Double.toString(n));
+
+        System.out.println(Math.random());
+        System.out.println(Math.random());
+        System.out.println(Math.random());
+        System.out.println(Math.random() * 10);
+        System.out.println(Math.random() * 100);
+        System.out.println((int) (Math.random() * 10));
+        System.out.println((int) (Math.random() * 10));
+        System.out.println((int) (Math.random() * 10));
+
+        Random r1 = new Random();
+        Random r2 = new Random();
+        System.out.println(r1.nextDouble());
+        System.out.println(r2.nextDouble());
+        Random r3 = new Random(1);
+        Random r4 = new Random(1);
+        System.out.println(r3.nextDouble());
+        System.out.println(r4.nextDouble());
+
+        Random r5 = new Random();
+        r5.setSeed(1);
+        System.out.println(r5.nextDouble());
+        r5.setSeed(1);
+        System.out.println(r5.nextDouble());
+        r5.setSeed((new Date()).getTime());
+        System.out.println(r5.nextDouble());
+
+        Random r6 = new Random();
+        System.out.println(r6.nextBoolean());
+        System.out.println(r6.nextBoolean());
+        System.out.println(r6.nextBoolean());
+
+        Random r7 = new Random();
+        System.out.println(r7.nextInt(5));
+        System.out.println(r7.nextInt(5));
+        System.out.println(r7.nextInt(5));
+        System.out.println(r7.nextInt(5));
+        System.out.println(r7.nextInt(5));
+
+        byte[] arr = new byte[10];
+        Random r8 = new Random();
+        r8.nextBytes(arr);
+        for (byte x4: arr) {
+            System.out.print(x4 + " ");
+        }
+
+        System.out.println();
+
+        System.out.println(Double.POSITIVE_INFINITY);
+        System.out.println(Double.NEGATIVE_INFINITY);
+        System.out.println(Double.NaN);
+        System.out.println(Float.isFinite(10.0f / 0.0f));
+        System.out.println(Float.isFinite(10.0f / 1.0f));
+        System.out.println(Double.isFinite(10.0 / 0.0));
+        System.out.println(Double.isFinite(-10.0 / 0.0));
+        System.out.println(Float.isInfinite(10.0f / 0.0f));
+        System.out.println(Float.isInfinite(10.0f / 1.0f));
+        System.out.println(Double.isInfinite(10.0 / 0.0));
+        System.out.println(Double.isInfinite(-10.0 / 0.0));
+
 
 
     }
