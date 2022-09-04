@@ -1,6 +1,10 @@
 package OOP;
 
 public class Rectangle {
-    public Point topLeft = new Point();
-    public Point bottomRight = new Point();
+    public Point topLeft;
+    public Point bottomRight;
+    {
+        topLeft = new Point();
+        bottomRight = new Point(2, 3);
+    }
 }

@@ -9,8 +9,18 @@ public class Point {
         p3 = null;
         Point p4 = null;
     }
-    public int x;
-    public int y;
+    private int x;
+    private int y;
+
+    public Point() {
+        this.x = 0;
+        this.y = 0;
+    }
+
+    public Point(int x , int y) {
+        setX(x);
+        setY(y);
+    }
 
     public void setX(int x){
         this.x = x;

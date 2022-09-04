@@ -3,13 +3,13 @@ package OOP;
 public class MyClass {
     public static void main(String[] args) {
         Rectangle rect = new Rectangle();
-        rect.topLeft.x = 0;
-        rect.topLeft.y = 0;
-        rect.bottomRight.x = 100;
-        rect.bottomRight.y = 100;
-        System.out.println(rect.topLeft.x + " " +
-                rect.topLeft.y + " " +
-                rect.bottomRight.x + " " +
-                rect.bottomRight.y);
+        rect.topLeft.setX(0);
+        rect.topLeft.setY(0);
+        rect.bottomRight.setX(100);
+        rect.bottomRight.setY(100);
+        System.out.println(rect.topLeft.getX() + " " +
+                rect.topLeft.getY() + " " +
+                rect.bottomRight.getX() + " " +
+                rect.bottomRight.getY());
     }
 }
