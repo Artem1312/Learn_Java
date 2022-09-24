@@ -2,9 +2,21 @@ package Interfase;
 
 public class MyClass2 {
     public static void main(String[] args) {
+        // first variant
+        //MyButton button = new MyButton();
+        //IClick ic = new A();
+        //button.reg(ic);
+
+
+        // second variant
         MyButton button = new MyButton();
-        IClick ic = new A();
-        button.reg(ic);
+        button.reg(new IClick() {
+            @Override
+            public void onClick() {
+                System.out.println("Нажата кнопка");
+            }
+        });
+
         for (int i = 0; i < 5; i++) {
             button.click();
             try {
