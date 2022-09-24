@@ -32,5 +32,16 @@ public class MyCass {
 
         IStaticPrivate.test();
         // IStaticPrivate.print();  //error
+
+        test_L obj6 = new test_L();
+        obj6.print();
+        test_M obj7 = new test_M();
+        obj7.print();
+
+        test_N obj8 = new test_N();
+        obj8.print();
+
+        test_P obj9 = new test_P();
+        obj9.test();
     }
 }

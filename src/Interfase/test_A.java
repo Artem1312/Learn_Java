@@ -89,3 +89,22 @@ class test_K implements IStatic {
         IStatic.test();
     }
 }
+
+class test_L implements IDefault {}
+
+class test_M implements IDefault {
+    @Override
+    public void print() {
+        System.out.println("Good buy!");
+    }
+}
+
+class test_N implements IDefault, IDefault2 {
+    @Override
+    public void print() {
+        IDefault.super.print();
+        IDefault2.super.print();
+    }
+}
+
+class test_P implements IPrivate {}
