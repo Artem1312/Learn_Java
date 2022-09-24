@@ -47,3 +47,38 @@ class test_B extends test_A implements IRead {
     }
  }
 
+class test_E implements IRead, IWrite {
+
+    @Override
+    public String read() {
+        return "String 3";
+    }
+
+    @Override
+    public void write(String s) {
+        System.out.println(s);
+    }
+}
+
+class test_G implements IReadWrite {
+
+    @Override
+    public String read() {
+        return "String 4";
+    }
+
+    @Override
+    public void write(String s) {
+        System.out.println(s);
+    }
+}
+
+class test_H implements IConst {
+
+    @Override
+    public void print() {
+        System.out.println(test_H.MY_CONST1);
+        System.out.println(test_H.MY_CONST2);
+        System.out.println(test_H.MY_CONST3);
+    }
+}
