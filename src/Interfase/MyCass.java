@@ -26,5 +26,11 @@ public class MyCass {
         obj5.print();
         System.out.println(test_H.MY_CONST1);
         System.out.println(IConst.MY_CONST1);
+
+        test_K k = new test_K();
+        IStatic.print();
+
+        IStaticPrivate.test();
+        // IStaticPrivate.print();  //error
     }
 }

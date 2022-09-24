@@ -82,3 +82,10 @@ class test_H implements IConst {
         System.out.println(test_H.MY_CONST3);
     }
 }
+
+
+class test_K implements IStatic {
+    public test_K() {
+        IStatic.test();
+    }
+}
