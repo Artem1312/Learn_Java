@@ -1,5 +1,6 @@
 package Generic_types;
 
+import java.util.Date;
 import java.util.Objects;
 import java.util.function.Function;
 
@@ -39,6 +40,24 @@ public class MyClass1 {
         box_2.setObj("String 2");
         String s_2 = box_2.getObj();
         System.out.println(s_2);
+
+        /////
+
+        ClassA<Integer> c = new ClassA<Integer>(10);
+        System.out.println(c.obj);
+        ClassA<Double> c1 = new ClassA<Double>(10.5);
+        System.out.println(c1.obj);
+        ClassA<Date> d = new ClassA<Date>(new Date());
+        System.out.println(d.obj);
+
+
+        /////
+
+        ClassB<Integer, Double> b = new ClassB<Integer, Double>(10, 1.5, 45.9, 8);
+        System.out.println(b.obj1);
+        System.out.println(b.obj2);
+        System.out.println(b.obj3);
+        System.out.println(b.x);
     }
 }
 
@@ -68,5 +87,27 @@ class Box2 <T> {
     }
     public void setObj(T obj) {
         this.obj = obj;
+    }
+}
+
+class ClassA <T> {
+    public T obj;
+
+    public ClassA(T obj) {
+        this.obj = obj;
+    }
+}
+
+class ClassB <T1, T2> {
+    public T1 obj1;
+    public T2 obj2;
+    public T2 obj3;
+    int x;
+
+    public ClassB(T1 obj1, T2 obj2, T2 obj3, int x) {
+        this.obj1 = obj1;
+        this.obj2 = obj2;
+        this.obj3 = obj3;
+        this.x = x;
     }
 }
